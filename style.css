@@ -1,0 +1,257 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    margin: auto;
+}
+header{
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+header img{
+    width: 120px;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+header div.links{
+    display: flex;
+    align-items: center;
+}
+header a{
+    padding: 15px;
+    text-decoration: none;
+    color: #eee;
+    margin-right: 50px;
+    font-weight: 700;
+}
+header i{
+    display: none !important;
+}
+.active {
+    color: #da00ff;
+    border-bottom: #da00ff 2px solid;
+}
+.links a:hover {
+    color: #da00ff;
+    border-bottom: #da00ff 2px solid;
+}
+#home{
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+}
+#home img{
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    margin-top: calc((100vh - 330px) / 2);
+}
+#home div{
+    width: 70%;
+    justify-content: center;
+    align-content: center;
+    color: #eee;
+}
+#home div p:first-of-type,
+#home div p:nth-of-type(2){
+    font-size: 2.5rem;
+}
+#home div p:nth-of-type(3){
+    margin-top: 30px;
+    font-size: larger;
+}
+#home div p:first-of-type span,
+#home div p:nth-of-type(2) span{
+    color: #da00ff;
+}
+#skills > p:first-of-type{
+    text-align: center;
+    font-size: 120px;
+    font-weight: 700;
+    color: #eee;
+    margin-bottom: 50px;
+}
+#skills > :not(p:first-of-type){
+display: flex;
+justify-content: center;
+}
+#skills > p:not(:first-of-type){
+    color: #eee;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+#skills img{
+    width: 100px;
+    height: 100px;
+}
+#skills > div{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 70px;
+    row-gap: 30px;
+    align-content: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+}
+#skills > div p{
+    text-align: center;
+    color: #eee
+}
+#projects > p{
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    font-size: 120px;
+    font-weight: 700;
+    color: #eee;
+    margin-bottom: 50px;
+}
+#projects img {
+    width: 250px;
+    height: 150px;
+    margin-bottom: 1rem;
+}
+#projects div.pro{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+#projects div.pro a{
+    text-decoration: none;
+    color: #eee;
+    font-weight: 700;
+    padding: 1rem;
+}
+#projects div.pro a:hover{
+    color: #da00ff;
+    border-bottom: #da00ff 2px solid;
+}
+/* #contact,
+#projects{
+    min-height: 100vh;
+} */
+#contact > p{
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    font-size: 120px;
+    font-weight: 700;
+    color: #eee;
+    margin-bottom: 50px;
+}
+#contact .bra{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+#contact .bra div{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+#contact .bra a{
+    color: #eee;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 2rem;
+}
+#contact i{
+    width: 50px;
+    height: 50px;
+    color: #eee;
+    font-size: 2rem;
+    border: #da00ff 2px solid;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#contact .bra a:hover{
+    color: #da00ff;
+}
+footer{
+    background-color: #eee;
+    color: #333;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer p {
+    font-weight: 700;
+    font-size: 2rem;
+}
+footer span{
+    color: #da00ff;
+}
+/* for phones */
+@media (max-width: 600px){
+    .container{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    div.links{
+        display: none !important;
+    }
+    header img{
+        margin-left: 0;
+    }
+    #home{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    #home img{
+        margin-top: 50px;
+        margin-bottom: 40px;
+    }
+    #skills > p:first-of-type,
+    #projects > p,
+    #contact > p{
+        font-size: 80px;
+    }
+    footer p{
+        font-size: 1rem;
+    }
+    header i{
+        display: block !important;
+        color: #eee;
+        margin-top: 24px;
+        margin-right: 5px;
+        transform: scale(2) translateY(25%);
+    }
+    .break{
+        display: none;
+    }
+}
+/* for tabblets */
+@media (min-width: 600px ) and (max-width: 992px) {
+    #home{
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 0;
+    }
+    #home img{
+        margin-top: 25%;
+        margin-bottom: 40px;
+    }
+    .break{
+        display: none;
+    }
+}
